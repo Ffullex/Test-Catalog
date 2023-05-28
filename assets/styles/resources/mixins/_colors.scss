@@ -1,0 +1,23 @@
+@import '../variables/sizes';
+@import '../variables/colors';
+
+/* stylelint-disable declaration-no-important */
+@mixin color($color-name, $color) {
+  .color-#{$color-name} {
+    color: $color !important;
+  }
+
+  .bg-#{$color-name} {
+    background-color: $color !important;
+  }
+}
+/* stylelint-enable declaration-no-important */
+
+/* stylelint-disable color-function-notation */
+@mixin shadow {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+}
+@mixin shadow-header-footer {
+  box-shadow: 0 0 8px 0 rgba(0, 16, 38, 0.08);
+}
+/* stylelint-enable color-function-notation */

@@ -1,0 +1,174 @@
+// adaptive
+@use 'sass:map';
+@import '../variables/grid';
+@import '../variables/sizes';
+@import '../variables/index';
+
+/* stylelint-disable declaration-no-important */
+@mixin sizes-classes($screen-name: '') {
+  .ml#{$screen-name}-auto {
+    margin-left: auto !important;
+  }
+
+  .mr#{$screen-name}-auto {
+    margin-right: auto !important;
+  }
+
+  .mx#{$screen-name}-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .my#{$screen-name}-auto {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+  }
+
+  @each $index, $size in $sizes {
+    .m#{$screen-name}-#{$index} {
+      margin: $size !important;
+    }
+
+    .mx#{$screen-name}-#{$index} {
+      margin-right: $size !important;
+      margin-left: $size !important;
+    }
+
+    .my#{$screen-name}-#{$index} {
+      margin-top: $size !important;
+      margin-bottom: $size !important;
+    }
+
+    .mt#{$screen-name}-#{$index} {
+      margin-top: $size !important;
+    }
+
+    .mr#{$screen-name}-#{$index} {
+      margin-right: $size !important;
+    }
+
+    .mb#{$screen-name}-#{$index} {
+      margin-bottom: $size !important;
+    }
+
+    .ml#{$screen-name}-#{$index} {
+      margin-left: $size !important;
+    }
+
+    .p#{$screen-name}-#{$index} {
+      padding: $size !important;
+    }
+
+    .px#{$screen-name}-#{$index} {
+      padding-right: $size !important;
+      padding-left: $size !important;
+    }
+
+    .py#{$screen-name}-#{$index} {
+      padding-top: $size !important;
+      padding-bottom: $size !important;
+    }
+
+    .pt#{$screen-name}-#{$index} {
+      padding-top: $size !important;
+    }
+
+    .pr#{$screen-name}-#{$index} {
+      padding-right: $size !important;
+    }
+
+    .pb#{$screen-name}-#{$index} {
+      padding-bottom: $size !important;
+    }
+
+    .pl#{$screen-name}-#{$index} {
+      padding-left: $size !important;
+    }
+  }
+}
+
+@mixin flex-utils-classes($screen-name: '') {
+  .ai#{$screen-name}-center {
+    align-items: center !important;
+  }
+
+  .ai#{$screen-name}-flex-start {
+    align-items: flex-start !important;
+  }
+
+  .ai#{$screen-name}-flex-end {
+    align-items: flex-end !important;
+  }
+
+  .jc#{$screen-name}-space-between {
+    justify-content: space-between !important;
+  }
+
+  .jc#{$screen-name}-flex-end {
+    justify-content: flex-end !important;
+  }
+
+  .jc#{$screen-name}-center {
+    justify-content: center !important;
+  }
+
+  .jc#{$screen-name}-flex-start {
+    justify-content: flex-start !important;
+  }
+
+  .fd#{$screen-name}-column {
+    flex-direction: column !important;
+  }
+
+  .fd#{$screen-name}-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+
+  .fd#{$screen-name}-row {
+    flex-direction: row !important;
+  }
+
+  .fd#{$screen-name}-row-reverse {
+    flex-direction: row-reverse !important;
+  }
+
+  .f#{$screen-name}-wrap {
+    flex-wrap: wrap !important;
+  }
+}
+
+@mixin display-classes($screen-name: '') {
+  .d#{$screen-name}-grid {
+    display: grid !important;
+  }
+
+  .d#{$screen-name}-block {
+    display: block !important;
+  }
+
+  .d#{$screen-name}-inline-block {
+    display: inline-block !important;
+  }
+
+  .d#{$screen-name}-flex {
+    display: flex !important;
+  }
+
+  .d#{$screen-name}-inline-flex {
+    display: inline-flex !important;
+  }
+
+  .d#{$screen-name}-inline {
+    display: inline !important;
+  }
+
+  .d#{$screen-name}-none {
+    display: none !important;
+  }
+}
+
+/* stylelint-enable declaration-no-important */
+
+@mixin z-index($name) {
+  z-index: map.get($z-index, $name);
+}

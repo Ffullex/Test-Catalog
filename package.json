@@ -1,5 +1,5 @@
 {
-  "name": "dc-nuxt-preset",
+  "name": "test-catalog",
   "private": true,
   "scripts": {
     "prepare": "husky install",

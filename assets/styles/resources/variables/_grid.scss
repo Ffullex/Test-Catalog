@@ -1,0 +1,66 @@
+@import 'sizes';
+
+// breakpoints
+$breakpoint--sm: 660px;
+$breakpoint--md: 800px;
+$breakpoint--lg: 1200px;
+$breakpoint--xl: 1600px;
+
+$breakpoints: (
+  xs: '(max-width: #{$breakpoint--sm - 1px})',
+  // мобилка
+  sm: '(min-width: #{$breakpoint--sm})',
+  // планшет
+  md: '(min-width: #{$breakpoint--md})',
+  // маленькие ноутбуки
+  lg: '(min-width: #{$breakpoint--lg})',
+  // ноутбук
+  xl: '(min-width: #{$breakpoint--xl})',
+  // полноразмерные экраны
+);
+
+$breakpoints-with-max: (
+  xs: '(max-width: #{$breakpoint--sm - 1px})',
+  sm: '(min-width: #{$breakpoint--sm}) and (max-width: #{$breakpoint--md - 1px})',
+  md: '(min-width: #{$breakpoint--md}) and (max-width: #{$breakpoint--lg - 1px})',
+  lg: '(min-width: #{$breakpoint--lg}) and (max-width: #{$breakpoint--xl - 1px})',
+  xl: '(min-width: #{$breakpoint--xl})',
+);
+
+$breakpoints-only-max: (
+  xs: '(max-width: #{$breakpoint--sm - 1px})',
+  sm: '(max-width: #{$breakpoint--md - 1px})',
+  md: '(max-width: #{$breakpoint--lg - 1px})',
+  lg: '(max-width: #{$breakpoint--xl - 1px})',
+  xl: '(min-width: #{$breakpoint--xl})',
+);
+
+$breakpoints-map: $breakpoints !default;
+
+$breakpoint-padding--xs: 12px;
+$breakpoint-padding--sm: 20px;
+$breakpoint-padding--md: 40px;
+$breakpoint-padding--lg: 60px;
+$breakpoint-padding--xl: 80px;
+
+/* Containers */
+$container-xs: (
+  screen: $breakpoint--sm,
+  padding: $breakpoint-padding--xs,
+);
+$container--sm: (
+  screen: $breakpoint--sm,
+  padding: $breakpoint-padding--sm,
+);
+$container--md: (
+  screen: $breakpoint--md,
+  padding: $breakpoint-padding--md,
+);
+$container--lg: (
+  screen: $breakpoint--lg,
+  padding: $breakpoint-padding--lg,
+);
+$container--xl: (
+  screen: $breakpoint--xl,
+  padding: $breakpoint-padding--xl,
+);

@@ -1,5 +1,9 @@
 <template>
   <div>
-    <icon-template name="rocket-svgrepo-com" />
+    <c-header />
   </div>
 </template>
+
+<script setup lang="ts">
+import CHeader from '~/components/global/CHeader/CHeader.vue'
+</script>
